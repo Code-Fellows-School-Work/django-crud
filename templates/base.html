@@ -6,6 +6,10 @@
     <title>Snacks</title>
   </head>
   <body>
+    <nav>
+        <a href ="{% url 'snack_list' %}">Home</a>
+        <a href ="{% url 'about' %}">About</a>
+    </nav>
     {% block content %} 
     child template goes here 
     {% endblock content %}
