@@ -4,6 +4,7 @@ from django.urls import reverse
 
 from .models import Snack
 
+# Used ChatGPT to replace instances of Thing and replaced with Snack
 class SnackTests(TestCase):
     def setUp(self):
         self.user = get_user_model().objects.create_user(

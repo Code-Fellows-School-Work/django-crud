@@ -24,6 +24,7 @@
     {% endblock content %}
   </div>
   <!-- Used ChatGPT to learn how to conditionally show the create button only on base template -->
+  <!-- Used ChatGPT to copy styles from previous labs and apply to this lab -->
   {% if request.path == "/" %}
   <div class="text-center mt-4">
     <a href="{% url 'snack_create' %}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create</a>
