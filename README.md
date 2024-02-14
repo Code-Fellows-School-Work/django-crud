@@ -3,7 +3,8 @@
 ## Project: Django-Models
 
 ### Author: Errol Vidad
-V.1.0.0 (Pr: https://github.com/Code-Fellows-School-Work/django-crud/pull/1)
+V.1.0.0 (Pr: https://github.com/Code-Fellows-School-Work/django-crud)
+I realized at the end I accidently forgot to create a feature branch so I did everything on the main branch...
 
 ### Links and Resources
 - Back-end server url (when applicable): None
