@@ -3,26 +3,31 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Snacks</title>
-    {% compress css %}
-    <link rel="stylesheet" href="{% static 'src/output.css' %}">
-    {% endcompress %}
-  </head>
-  <body class="bg-slate-600">
-    <nav>
-        <a href ="{% url 'snack_list' %}">Home</a>
-        <a href ="{% url 'about' %}">About</a>
-    </nav>
-    <ul>
-        <li>
-            <a href="{% url 'snack_create' %}">Create</a>
-        </li>
-    </ul>
-    {% block content %} 
-    child template goes here 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snacks</title>
+  {% compress css %}
+  <link rel="stylesheet" href="{% static 'src/output.css' %}" />
+  {% endcompress %}
+</head>
+<body class="bg-slate-400">
+  <nav class="bg-gray-800 p-4 flex justify-center">
+    <div class="text-white space-x-4">
+      <a href="{% url 'snack_list' %}" class="hover:text-gray-300">Home</a>
+      <a href="{% url 'about' %}" class="hover:text-gray-300">About</a>
+    </div>
+  </nav>
+  <div class="container mx-auto mt-8">
+    {% block content %}
+    child template goes here
     {% endblock content %}
-  </body>
+  </div>
+  <!-- Used ChatGPT to learn how to conditionally show the create button only on base template -->
+  {% if request.path == "/" %}
+  <div class="text-center mt-4">
+    <a href="{% url 'snack_create' %}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create</a>
+  </div>
+  {% endif %}
+</body>
 </html>

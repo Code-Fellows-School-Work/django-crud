@@ -1,3 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
 {% block content %}
-<h2>Hello About</h2>
+<div class="max-w-4xl mx-auto py-8 px-4">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-8">About Me</h1>
+    <div class="mb-6 p-4 bg-white shadow-md rounded-lg">
+        <div class="my-4 flex justify-center h-400">
+            <img src="{% static 'images/tonkotsu.jpg' %}" alt="Tonkotsu" class="max-w-xs rounded-lg shadow-md">
+        </div>
+        <p class="text-center text-gray-600 text-lg">Hi! My name is Tonkotsu and this website contains all my other snacks.</p>
+    </div>
+</div>
 {% endblock content %}
